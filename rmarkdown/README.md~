@@ -3,6 +3,14 @@ R Markdownでスライド作成
 
 ## Install
 
+- homebrewのupdate
+
+```
+$ brew doctor
+# 問題を指摘されるようであれば全て対応する
+# brew update
+```
+
 - Rの導入
 
 ```zsh
@@ -15,6 +23,9 @@ $ brew install Caskroom/cask/rstudio
 
 ```
 $ R
+> install.packages("stringi")
+# CRANの配信ディストリビューションを11(Japan)に設定
+11
 > install.packages("rmarkdown", dependencies = TRUE)
 ```
 
@@ -30,5 +41,21 @@ $ brew install pandoc
 $ R
 > library(rmarkdown)
 > pandoc_available()
-TRUE
+[1] TRUE
+```
+
+## Usage
+
+- HTML Slidyに変換
+
+```
+$ R
+# パッケージの読み込み
+> library(rmarkdown)
+# 作業フォルダを変更
+> setwd("/path/to/stress-php7/rmarkdown/src") 
+# 変換!!
+> render("sample.Rmd") 
+# ブラウザで開く
+> browseURL("sample.html") 
 ```
