@@ -9,20 +9,74 @@ output:
 
 # PHP7は速いのか
 
-## Yes, it is!
+> - 速くて当然
+> - 比べるまでもない
+> - 本当にそうか???
 
-## phalcon
+# Yes, it is!
 
-## 環境
+- [yii framework](http://www.yiiframework.com/)
+    - fast
+	- secure
+	- professional
+- 共産圏の秘密兵器
+- PHP7環境下でも早いよね??
 
-## ツール
+# 環境
 
-## Tips
+- LEMP
+    - CentOS 6.7
+	- NGINX 1.9.10(main line)
+	- PHP + PHP-FPM
+	- MySQL 5.6
+		- 今回は、稼働させない
 
-## 成果
+# ツール
 
-## 課題
+- [Chef](https://www.chef.io/chef/)で構成管理
+    - [AWS OpsWorks](https://aws.amazon.com/jp/opsworks/)を利用
+- [Test Kitchen](http://kitchen.ci/)でインフラテスト
+	- テストコードは、[serverspec](http://serverspec.org/)が大半
+- [Packer](https://www.packer.io/)で環境構築
+	- 環境構築の職人化を防ぐ
+- [Vagrant](https://www.vagrantup.com/)でローカル開発
+- [Gatling](http://gatling.io/)で攻撃
 
-## まとめ
+# Tips
 
-## 終わりに
+- 差異を局所化する
+	- 立派なchefになる 
+- 攻撃サーバと対象サーバを近くに配置する
+	- ネットワークレイテンシを局所化する
+- お金をかけない
+	- DEV環境からAWS...
+
+# 成果
+
+- 実演
+
+# 課題
+
+- 他のフレームワークはどうか??
+    - phalconとか
+
+# まとめ
+
+- yiiのPHP7対応は、課題が多い
+	- 本試験では、mb_strlen関数が稼働しなかった
+		- strlen問題か?
+- 性能は、特定の条件下での結果でしかない
+	- PHP7だからといって一様に性能が向上するわけではない
+	- 試験の設計と考察を継続的に実施する必要がある
+- PHPで最速を探求したい
+	- チーム開発のツールとしてのPHP
+	- auスマートパスを支えるPHP
+
+# 終わりに
+
+- 元ネタ
+	- 弊社の技術顧問(元)
+	- http://yamaz.hatenablog.com/
+- 仲間求む
+	- 中途採用やってます。よろしくおねがいします。
+	- http://www.mediba.jp/recruit/career/engineer/

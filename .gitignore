@@ -1,0 +1,14 @@
+# Temporary files
+## vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+## Bundler
+/.bundle/
+/vendor/
+## Vagrant
+.vagrant/
+## Test Kitchen
+.kitchen/

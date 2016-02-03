@@ -20,7 +20,130 @@
   </p>
   <p class="date">2016年2月4日</p>
 </div>
-<div id="php7" class="titleslide slide section level1"><h1>PHP7は速いのか</h1></div><div id="yes-it-is" class="titleslide slide section level2"><h1>Yes, it is!</h1></div><div id="phalcon" class="titleslide slide section level2"><h1>phalcon</h1></div><div class="titleslide slide section level2"><h1>環境</h1></div><div class="titleslide slide section level2"><h1>ツール</h1></div><div id="tips" class="titleslide slide section level2"><h1>Tips</h1></div><div class="titleslide slide section level2"><h1>成果</h1></div><div class="titleslide slide section level2"><h1>課題</h1></div><div class="titleslide slide section level2"><h1>まとめ</h1></div><div class="titleslide slide section level2"><h1>終わりに</h1></div>
+<div id="php7" class="slide section level1">
+<h1>PHP7は速いのか</h1>
+<ul class="incremental">
+<li>速くて当然</li>
+<li>比べるまでもない</li>
+<li>本当にそうか???</li>
+</ul>
+</div>
+<div id="yes-it-is" class="slide section level1">
+<h1>Yes, it is!</h1>
+<ul>
+<li><a href="http://www.yiiframework.com/">yii framework</a>
+<ul>
+<li>fast</li>
+<li>secure</li>
+<li>professional</li>
+</ul></li>
+<li>共産圏の秘密兵器</li>
+<li>PHP7環境下でも早いよね??</li>
+</ul>
+</div>
+<div class="slide section level1">
+<h1>環境</h1>
+<ul>
+<li>LEMP
+<ul>
+<li>CentOS 6.7</li>
+<li>NGINX 1.9.10(main line)</li>
+<li>PHP + PHP-FPM</li>
+<li>MySQL 5.6
+<ul>
+<li>今回は、稼働させない</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div class="slide section level1">
+<h1>ツール</h1>
+<ul>
+<li><a href="https://www.chef.io/chef/">Chef</a>で構成管理
+<ul>
+<li><a href="https://aws.amazon.com/jp/opsworks/">AWS OpsWorks</a>を利用</li>
+</ul></li>
+<li><a href="http://kitchen.ci/">Test Kitchen</a>でインフラテスト
+<ul>
+<li>テストコードは、<a href="http://serverspec.org/">serverspec</a>が大半</li>
+</ul></li>
+<li><a href="https://www.packer.io/">Packer</a>で環境構築
+<ul>
+<li>環境構築の職人化を防ぐ</li>
+</ul></li>
+<li><a href="https://www.vagrantup.com/">Vagrant</a>でローカル開発</li>
+<li><a href="http://gatling.io/">Gatling</a>で攻撃</li>
+</ul>
+</div>
+<div id="tips" class="slide section level1">
+<h1>Tips</h1>
+<ul>
+<li>差異を局所化する
+<ul>
+<li>立派なchefになる</li>
+</ul></li>
+<li>攻撃サーバと対象サーバを近くに配置する
+<ul>
+<li>ネットワークレイテンシを局所化する</li>
+</ul></li>
+<li>お金をかけない
+<ul>
+<li>DEV環境からAWS…</li>
+</ul></li>
+</ul>
+</div>
+<div class="slide section level1">
+<h1>成果</h1>
+<ul>
+<li>実演</li>
+</ul>
+</div>
+<div class="slide section level1">
+<h1>課題</h1>
+<ul>
+<li>他のフレームワークはどうか??
+<ul>
+<li>phalconとか</li>
+</ul></li>
+</ul>
+</div>
+<div class="slide section level1">
+<h1>まとめ</h1>
+<ul>
+<li>yiiのPHP7対応は、課題が多い
+<ul>
+<li>本試験では、mb_strlen関数が稼働しなかった
+<ul>
+<li>strlen問題か?</li>
+</ul></li>
+</ul></li>
+<li>性能は、特定の条件下での結果でしかない
+<ul>
+<li>PHP7だからといって一様に性能が向上するわけではない</li>
+<li>試験の設計と考察を継続的に実施する必要がある</li>
+</ul></li>
+<li>PHPで最速を探求したい
+<ul>
+<li>チーム開発のツールとしてのPHP</li>
+<li>auスマートパスを支えるPHP</li>
+</ul></li>
+</ul>
+</div>
+<div class="slide section level1">
+<h1>終わりに</h1>
+<ul>
+<li>元ネタ
+<ul>
+<li>弊社の技術顧問(元)</li>
+<li><a href="http://yamaz.hatenablog.com/" class="uri">http://yamaz.hatenablog.com/</a></li>
+</ul></li>
+<li>仲間求む
+<ul>
+<li>中途採用やってます。よろしくおねがいします。</li>
+<li><a href="http://www.mediba.jp/recruit/career/engineer/" class="uri">http://www.mediba.jp/recruit/career/engineer/</a></li>
+</ul></li>
+</ul>
+</div>
 
   <!-- dynamically load mathjax for compatibility with self-contained -->
   <script>
